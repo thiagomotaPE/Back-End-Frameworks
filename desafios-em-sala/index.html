@@ -1,0 +1,89 @@
+<!-- 
+    1.
+    const readline = require('readline-sync'); //o modulo readline é tipo o Scanner do java.
+
+const pessoa = readline.question("Ola, você é estudante ou idoso(a)? S/N ").toUpperCase();
+
+switch (pessoa) {
+    case "S":
+        console.log("Você tem direito a meia entrada");
+        break
+    case "N":
+        console.log("Você não tem direito a meia entrada");
+        break
+    default:
+        console.log("entrada invalida!");
+}
+ -->
+
+ <!-- 
+    2.
+    const readline = require('readline-sync'); //o modulo readline é tipo o Scanner do java.
+
+    const nota1 = Number(readline.question("Digite sua primeira nota:  "));
+    const nota2 = Number(readline.question("Digite sua segunda nota:  "));
+
+    const media = (nota1 + nota2) / 2;
+
+    if(media >= 7) {
+        console.log("aprovado!");
+    }else if (media >= 4 && media < 7) {
+        console.log("aluno de recuperação!");
+    }else{
+        console.log("aluno reprovado!")
+    }
+  -->
+
+  <!-- 
+    3.
+    const readline = require('readline-sync');
+
+    const num1 = Number(readline.question("Digite um numero: "));
+
+    const num2 = Number(readline.question("Digite outro numero: "));
+
+    const num3 = Number(readline.question("Digite outro numero: "));
+
+    let max = Math.max(num1, num2, num3);
+
+    console.log(max);
+   -->
+
+   <!-- 
+    4.
+    const readline = require('readline-sync');
+
+    const sexo = readline.question("qual seu sexo?  M/F ").toUpperCase();
+
+    const idade = Number(readline.question("qual sua idade?  "));
+
+    if (sexo == "M") {
+    console.log("Seu sexo é Masculino");
+    if(idade <= 9 ) {
+        console.log("é uma criança");
+        }else{
+            console.log("é um adulto")
+        }
+    }else if (sexo == "F") {
+    console.log("Seu sexo é Feminino ");
+    if(idade <= 9 ) {
+        console.log("é uma criança");
+        }else{
+            console.log("é um adulto")
+        }
+    }
+    -->
+
+    <!-- 
+        5.
+        const readline = require('readline-sync');
+
+        const n = Number(readline.question("digite um numero: "));
+        var total=n/2;
+        if(n%2 == 0){
+            alert("Par");
+        }else{
+            alert("Impar");
+        }
+        alert(total)
+     -->
