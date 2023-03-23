@@ -50,6 +50,3 @@
 //     default:
 //         console.log("é consoante");
 // }
-
-
-
