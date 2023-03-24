@@ -1,21 +1,29 @@
 const readline = require('readline-sync');
 
-const sexo = readline.question("qual seu sexo?  M/F ").toUpperCase();
-const idade = Number(readline.question("qual sua idade?  "));
+let sexo = "";
+let idade = 0;
 
-    switch(sexo) {
-        case 'M':
-            console.log("é Masculino");
-            break;
-        case 'F':
-            console.log("é Feminino ");
-            break;
-        default:
-            console.log("insira um valor valido(M/F) para continuar!");
-    }
+do {
+    sexo = readline.question("Qual seu sexo? M/F: ").toUpperCase();
+} while (sexo !== 'M' && sexo !== 'F');
+
+do {
+    idade = Number(readline.question("qual sua idade?  "));
+} while (isNaN(idade) || idade <= 0);
+
+switch(sexo) {
+    case 'M':
+        console.log("é Masculino");
+        break;
+    case 'F':
+        console.log("é Feminino ");
+        break;
+    default:
+        console.log("insira um valor valido(M/F) para continuar!");
+}
     
-    if(idade <= 9 ) {
-        console.log("é uma criança");
-    }else{
-        console.log("é um adulto")
-    }
+if(idade <= 9 ) {
+    console.log("é uma criança");
+}else{
+    console.log("é um adulto")
+}
