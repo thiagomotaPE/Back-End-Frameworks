@@ -1,7 +1,15 @@
 const readline = require('readline-sync');
 
-const nota1 = Number(readline.question("Digite sua primeira nota:  "));
-const nota2 = Number(readline.question("Digite sua segunda nota:  "));
+let nota1 = 0;
+let nota2 = 0;
+
+do {
+    nota1 = Number(readline.question("Digite sua primeira nota:  "));
+}while(isNaN(nota1) || nota1 < 0 || nota1 > 10)
+
+do {
+    nota2 = Number(readline.question("Digite sua segunda nota:  "));
+}while(isNaN(nota2) || nota2 < 0 || nota2 > 10)
 
 const media = (nota1 + nota2) / 2;
 
