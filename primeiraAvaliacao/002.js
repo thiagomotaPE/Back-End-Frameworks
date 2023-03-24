@@ -1,6 +1,11 @@
 const readline = require('readline-sync');
 
-const n = Number(readline.question("digite um numero: "));
+let n = 0;
+
+do {
+    n = Number(readline.question("digite um numero: "));
+}while(isNaN(n))
+
 
 if(n%2 == 0){
     console.log("É Par");
