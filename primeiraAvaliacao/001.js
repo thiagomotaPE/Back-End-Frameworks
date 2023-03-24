@@ -18,8 +18,6 @@ switch(sexo) {
     case 'F':
         console.log("é Feminino ");
         break;
-    default:
-        console.log("insira um valor valido(M/F) para continuar!");
 }
     
 if(idade <= 9 ) {
