@@ -3,10 +3,15 @@ const readline = require('readline-sync');
 const sexo = readline.question("qual seu sexo?  M/F ").toUpperCase();
 const idade = Number(readline.question("qual sua idade?  "));
 
-    if (sexo == "M") {
-        console.log("Seu sexo é Masculino");
-    }else if (sexo == "F") {
-        console.log("Seu sexo é Feminino ");
+    switch(sexo) {
+        case 'M':
+            console.log("é Masculino");
+            break;
+        case 'F':
+            console.log("é Feminino ");
+            break;
+        default:
+            console.log("insira um valor valido(M/F) para continuar!");
     }
     
     if(idade <= 9 ) {
