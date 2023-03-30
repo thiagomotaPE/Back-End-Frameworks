@@ -41,7 +41,7 @@ switch(opcao) {
             gabarito[i] = readline.question(`Digite o gabarito da questao ${i + 1}: `);
         }
         console.clear();
-        
+
         //teste
         for (let i = 0; i < gabarito.length; i++) {
             console.log(`Gabarito questao ${i + 1}:${gabarito[i]}`);
