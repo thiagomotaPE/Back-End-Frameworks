@@ -43,14 +43,15 @@ let conjunto1 = [];
 let conjunto2 = [];
 let adicionar = 0;
 do{
-    adicionar = Number(readline.question("Digite 10 numeros: "));
+    let i = 0;
+    adicionar = Number(readline.question(`Digite um numero: `));
     conjunto1.push(adicionar);
 }while(conjunto1.length < 10)
 for(let i = 0; i < conjunto1.length; i++){
-    conjunto2.push(conjunto1[i]*conjunto1[i]);
+    conjunto2.push(Math.pow(conjunto1[i], 2));
+    console.log(conjunto1[i], conjunto2[i])
 }
-console.log(conjunto1);
-console.log(conjunto2);
+
 console.log(" ");
 
 
