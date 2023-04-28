@@ -12,6 +12,7 @@ class fruta {
         this.tem_semente = tem_semente
         this.tamanho = tamanho
         this.quantidade = quantidade
+        //this serve para se referir ao atributo desta mesma classe
     }
 
     venderFruta(qtd) {
@@ -24,7 +25,7 @@ class fruta {
 }
 
 let banana = new fruta("vermelha", "aguada", "cilindrico", false, "18 cm", 57)
-console.log(banana)
 
+console.log(banana)
 console.log(banana.venderFruta(3))
 console.log(banana)
