@@ -4,16 +4,20 @@ class Barraca {
     this.faturamento = 0
   }
 
-  vender(fruta, quantidade) {
-    for (fruta of this.estoque) {
-      if (fruta.nome == 'Maçã') {
-        novaFruta = {
+  vender(frutaJson, quantidade) {
+    for (let fruta of this.estoque) {
+      if (fruta.nome == frutaJson.nome) {
+        let posicaoFruta = this.estoque.indexOf(frutaJson)
+        this.estoque[posicaoFruta].quantidade = this.estoque[posicaoFruta].quantidade - quantidade
+        this.faturamento = this.faturamento + (frutaJson.preco) * quantidade
+        let novaFruta = {
           "nome": fruta.nome,
           "quantidade": fruta.quantidade - quantidade,
           "preco": fruta.preco,
           "descricao": fruta.descricao
         }
-        // Continue esse código! 
+       
+        // Continue esse código!
       }
     }
 
@@ -41,5 +45,5 @@ estoque = [
 ]
 const barraca_tinoco = new Barraca(estoque)
 
-barraca_tinoco.vender("Maçã", Number(10))
-console.log(`Parabéns, você vendeu a Maçã. Faturado: R$: ${barraca_tinoco.getFaturamento()}`)
+barraca_tinoco.vender(estoque[0], Number(10))
+console.log(`Parabéns, você vendeu a Maçã. Faturado: R$: ${barraca_tinoco.getFaturamento()} \n quantidade de fruta em estoque: ${barraca_tinoco.estoque[0].quantidade} \n Faturado: R$ ${barraca_tinoco.getFaturamento()}`)
