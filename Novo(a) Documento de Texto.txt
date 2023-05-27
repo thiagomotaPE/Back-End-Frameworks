@@ -1,0 +1,22 @@
+GET:
+O método GET é usado para solicitar dados em um servidor,  para buscar informações.
+POST:
+O método POST é usado para enviar dados ao servidor para a criação de um novo recurso. Normalmente, você usa o método POST para enviar formulários ou enviar dados que precisam ser processados e armazenados no servidor.
+PUT:
+O método PUT é usado para atualizar completamente um recurso existente no servidor. Ele substitui o recurso com os dados fornecidos na solicitação. Se o recurso não existir, o PUT pode criar um novo recurso com o URI especificado.
+PATCH:
+O método PATCH é semelhante ao PUT, mas é usado para fazer atualizações parciais em um recurso. Em vez de substituir completamente o recurso, o PATCH aplica as alterações especificadas na solicitação ao recurso existente.DELETE:
+DELETE:
+O método DELETE é usado para excluir um recurso específico no servidor. Ao enviar uma solicitação DELETE para um URI, o recurso correspondente é removido do servidor.
+códigos HTTP do 2** ao 5**
+
+200 OK: Indica que a requisição foi bem-sucedida.
+201: Indica que a requisição foi bem-sucedida e resultou na criação de um novo recurso.
+204: Indica que a requisição foi bem-sucedida, mas não há conteúdo para ser retornado na resposta.
+301: Indica que o recurso solicitado foi permanentemente movido para uma nova localização. O cliente deve redirecionar para a nova URL fornecida.
+304: Indica que o recurso não foi modificado desde a última requisição. É usado em conjunto com o cabeçalho de cache do cliente para economizar largura de banda.
+400: Indica que a requisição enviada pelo cliente é inválida, contém sintaxe incorreta ou parâmetros ausentes.
+401: Indica que o cliente não possui autorização para acessar o recurso solicitado. É necessário fornecer credenciais válidas.
+403: Indica que o acesso ao recurso solicitado é proibido, mesmo com autenticação válida. O servidor entende a requisição, mas recusa o acesso.
+404: Indica que o recurso solicitado não foi encontrado no servidor.
+500: Indica que ocorreu um erro interno no servidor durante o processamento da requisição. Esse código genérico é usado quando nenhum outro código de erro mais específico se aplica.
